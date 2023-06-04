@@ -1,0 +1,21 @@
+<div
+  style="
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+  "
+>
+  <div class="login-container">
+    <input [(ngModel)]="email" type="email" placeholder="Email" class="items" />
+    <input
+      [(ngModel)]="password"
+      type="password"
+      placeholder="Password"
+      class="items"
+    />
+    <button type="button" (click)="login()" class="item-button">Login</button>
+    <p *ngIf="success" style="color: green">{{ success }}</p>
+    <p *ngIf="error" style="color: red">{{ error }}</p>
+  </div>
+</div>
